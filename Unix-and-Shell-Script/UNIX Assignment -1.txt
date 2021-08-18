@@ -1,0 +1,496 @@
+﻿Name: Uma Pillai
+
+Assignments:-
+
+
+1. List the contents of a directory and their attributes
+uma@uma-VirtualBox:~$ ls
+Desktop    Downloads  Music     players  Templates
+Documents  food       Pictures  Public   Videos
+
+
+2. Long list the content with file, directory ownership, permissions,sizes, etc…
+uma@uma-VirtualBox:~$ ls -l
+total 36
+drwxr-xr-x 3 uma uma 4096 Aug  5 15:40 Desktop
+drwxr-xr-x 2 uma uma 4096 Aug  3 12:20 Documents
+drwxr-xr-x 2 uma uma 4096 Aug  3 12:20 Downloads
+-rw-rw-r-- 1 uma uma    0 Aug  5 12:23 food
+drwxr-xr-x 2 uma uma 4096 Aug  3 12:20 Music
+drwxr-xr-x 2 uma uma 4096 Aug  3 12:20 Pictures
+-rw-rw-r-- 1 uma uma   99 Aug  5 11:27 players
+drwxr-xr-x 2 uma uma 4096 Aug  3 12:20 Public
+drwxr-xr-x 2 uma uma 4096 Aug  3 12:20 Templates
+drwxr-xr-x 2 uma uma 4096 Aug  3 12:20 Videos
+3. Display the size of the file in human readable format
+uma@uma-VirtualBox:~$ ls -sh
+total 36K
+4.0K Desktop    4.0K Downloads  4.0K Music     4.0K players  4.0K Templates
+4.0K Documents     0 food       4.0K Pictures  4.0K Public   4.0K Videos
+
+
+4. Show all files and folders including hidden one
+uma@uma-VirtualBox:~$ ls -a
+.              .cache     food      Pictures  .sudo_as_admin_successful
+..             .config    .gnupg    players   Templates
+.bash_history  Desktop    .local    .profile  Videos
+.bash_logout   Documents  .mozilla  Public
+.bashrc        Downloads  Music     .ssh
+
+
+5. list directories recursively
+uma@uma-VirtualBox:~$ ls -R
+.:
+Desktop    Downloads  Music     players  Templates
+Documents  food       Pictures  Public   Videos
+
+
+./Desktop:
+ 9   demo.sh   dir   hello.sh   ss3.sh   sss3.sh   test.txt  'uma notes'
+
+
+./Desktop/dir:
+
+
+./Documents:
+
+
+./Downloads:
+
+
+./Music:
+
+
+./Pictures:
+
+
+./Public:
+
+
+./Templates:
+
+
+./Videos:
+
+
+6. Sort the files by size with largest at the top
+uma@uma-VirtualBox:~$ ls -l -sh -S
+total 36K
+4.0K drwxr-xr-x 3 uma uma 4.0K Aug  5 15:40 Desktop
+4.0K drwxr-xr-x 2 uma uma 4.0K Aug  3 12:20 Documents
+4.0K drwxr-xr-x 2 uma uma 4.0K Aug  3 12:20 Downloads
+4.0K drwxr-xr-x 2 uma uma 4.0K Aug  3 12:20 Music
+4.0K drwxr-xr-x 2 uma uma 4.0K Aug  3 12:20 Pictures
+4.0K drwxr-xr-x 2 uma uma 4.0K Aug  3 12:20 Public
+4.0K drwxr-xr-x 2 uma uma 4.0K Aug  3 12:20 Templates
+4.0K drwxr-xr-x 2 uma uma 4.0K Aug  3 12:20 Videos
+4.0K -rw-rw-r-- 1 uma uma   99 Aug  5 11:27 players
+   0 -rw-rw-r-- 1 uma uma    0 Aug  5 12:23 food
+
+
+7. Sort the files by last time modified displaying the newest first.
+uma@uma-VirtualBox:~$ ls -lt
+total 36
+drwxr-xr-x 3 uma uma 4096 Aug  5 15:40 Desktop
+-rw-rw-r-- 1 uma uma    0 Aug  5 12:23 food
+-rw-rw-r-- 1 uma uma   99 Aug  5 11:27 players
+drwxr-xr-x 2 uma uma 4096 Aug  3 12:20 Documents
+drwxr-xr-x 2 uma uma 4096 Aug  3 12:20 Downloads
+drwxr-xr-x 2 uma uma 4096 Aug  3 12:20 Music
+drwxr-xr-x 2 uma uma 4096 Aug  3 12:20 Pictures
+drwxr-xr-x 2 uma uma 4096 Aug  3 12:20 Public
+drwxr-xr-x 2 uma uma 4096 Aug  3 12:20 Templates
+drwxr-xr-x 2 uma uma 4096 Aug  3 12:20 Videos
+
+
+8. Display the location of a program/command, where it is installed.
+uma@uma-VirtualBox:~$ whereis mv
+mv: /usr/bin/mv /usr/share/man/man1/mv.1.gz
+
+
+9. Which command is used to switch directory from one to another
+uma@uma-VirtualBox:~$ cd Desktop/uma/demo
+uma@uma-VirtualBox:~/Desktop/uma/demo$ cd ../..
+uma@uma-VirtualBox:~/Desktop$ 
+
+
+10. List all the environment variables set for the current shell environment
+ma@uma-VirtualBox:~/Desktop$ env
+SHELL=/bin/bash
+SESSION_MANAGER=local/uma-VirtualBox:@/tmp/.ICE-unix/1365,unix/uma-VirtualBox:/tmp/.ICE-unix/1365
+QT_ACCESSIBILITY=1
+COLORTERM=truecolor
+XDG_CONFIG_DIRS=/etc/xdg/xdg-ubuntu:/etc/xdg
+XDG_MENU_PREFIX=gnome-
+GNOME_DESKTOP_SESSION_ID=this-is-deprecated
+GTK_IM_MODULE=ibus
+LANGUAGE=en_IN:en
+QT4_IM_MODULE=ibus
+GNOME_SHELL_SESSION_MODE=ubuntu
+SSH_AUTH_SOCK=/run/user/1000/keyring/ssh
+XMODIFIERS=@im=ibus
+DESKTOP_SESSION=ubuntu
+SSH_AGENT_PID=1288
+GTK_MODULES=gail:atk-bridge
+PWD=/home/uma/Desktop
+LOGNAME=uma
+XDG_SESSION_DESKTOP=ubuntu
+XDG_SESSION_TYPE=x11
+GPG_AGENT_INFO=/run/user/1000/gnupg/S.gpg-agent:0:1
+XAUTHORITY=/run/user/1000/gdm/Xauthority
+WINDOWPATH=2
+HOME=/home/uma
+USERNAME=uma
+
+
+11. Did you notice something in the output of "env" command?
+It prints a list of the current environment variables and they are unsorted.
+
+
+12. Which command is used to print the text or any variables value in the Console/Terminal?
+uma@uma-VirtualBox:~/Desktop$ echo "Hello World!"
+Hello World!
+uma@uma-VirtualBox:~/Desktop$ fruit=apple
+uma@uma-VirtualBox:~/Desktop$ echo $fruit
+apple
+13. Print the value of the env variable "PATH" on the console
+uma@uma-VirtualBox:~/Desktop$ echo $PATH
+/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+14. Is linux a case-sensitive operating system?
+YES
+uma@uma-VirtualBox:~/Desktop/uma$ ls
+demo.txt  DEMO.txt
+uma@uma-VirtualBox:~/Desktop/uma$ cat demo.txt
+This is in LowerCase
+uma@uma-VirtualBox:~/Desktop/uma$ cat DEMO.txt
+This is in UpperCase
+uma@uma-VirtualBox:~/Desktop/uma$ cat Demo
+cat: Demo: No such file or directory
+
+
+15. Is, "Ls" same as "ls"?
+uma@uma-VirtualBox:~/Desktop/uma$ ls
+demo.txt  DEMO.txt
+uma@uma-VirtualBox:~/Desktop/uma$ Ls
+Ls: command not found
+
+
+16. Display your currently logged in user
+uma@uma-VirtualBox:~/Desktop/uma$ who
+uma      :0           2021-08-06 12:19 (:0)
+
+
+17. how do you change the currrently logged in user to another user?
+“su <username>” command
+18. Which command is used to leave a shell environment that you are currently logged in to?
+“exit”  command
+19. How do you reboot the system?
+reboot or sudo reboot
+20. How do you shutdown the system?
+shutdown [OPTION]
+21. Display all the major running processes in the system
+uma@uma-VirtualBox:~$ ps -a
+    PID TTY          TIME CMD
+   2855 pts/0    00:00:00 bash
+   2985 pts/0    00:00:00 ps
+
+
+22. Understand the output of command used in above question of displaying processes, explain the meaning of each column and what data it displays?
+PID- Process Identifier- displays unique process id for each process in the system.
+TTY-  TeleTYpewriter- controlling terminal associated with process
+TIME- total CPU time of process
+CMD- command that is executed by the process
+23. Display the name of the system kernel
+uma@uma-VirtualBox:~$ uname -s
+Linux
+24. display the kernel release number
+uma@uma-VirtualBox:~$ uname -r
+5.8.0-63-generic
+25. display the machine type of the current kernel
+uma@uma-VirtualBox:~$ uname -m
+x86_64
+26. Display the name of the operating system that the kernel is running on
+uma@uma-VirtualBox:~$ uname -o
+GNU/Linux
+27. Display all info that uname command can show.
+uma@uma-VirtualBox:~$ uname -a
+Linux uma-VirtualBox 5.8.0-63-generic #71~20.04.1-Ubuntu SMP Thu Jul 15 17:46:08 UTC 2021 x86_64 x86_64 x86_64 GNU/Linux
+28. Display the name of directory that you are currently pointing to
+uma@uma-VirtualBox:~$ pwd
+/home/uma
+29. change the current directory to another directory that you have in your system.
+uma@uma-VirtualBox:~$ cd Desktop/
+
+
+30. Go up one directory
+uma@uma-VirtualBox:~/Desktop$ cd uma
+31. Return to last directory
+uma@uma-VirtualBox:~/Desktop/uma$ cd ..
+32. change the current directory to home(logged in user's) directory
+uma@uma-VirtualBox:~/Desktop$ cd
+33. How to check all the command used from the prompt (Command History)
+uma@uma-VirtualBox:~$ history
+    1  cd Desktop/
+    2  touch hello.sh
+    3  ls -al
+    4  gedit hello.sh
+    5  cls
+    6  clear
+    7  gedit hello.sh
+    8  cd Desktop/
+    9  touch hello.sh
+   10  ls -al
+   11  gedit hello.sh
+   12  ./hello.sh
+   13  chmod +x hello.sh
+etc
+34. In which file the history of commands are stored in?
+“.bash_history” in home directory. Command to see history file is $history
+35. How many lines of history does the system keep and from where you can change it?
+uma@uma-VirtualBox:~$ echo $HISTSIZE
+1000
+And we can change the size by using this command: export HISTSIZE=10000
+Or export HISTFILESIZE=10000
+36. How can you modify bash's history behaviour
+We can modify bash history’s behaviour by using the command export for different features of history command for example:
+* export HISTTIMEFORMAT=’%F %T’
+* export HISTCONTROL=ignoredups
+37. Display all the commands entered so far, now, try to run a particular command from the history list without typing that command.
+$ history
+$history !-n
+NOTE:- TAB key is your friend when it comes to command completion and having long file and directory names autocompleted at the bash prompt for you. JUST BE LAZY AND USE TAB KEY FOR AUTO COMPLETION ;-)
+uma@uma-VirtualBox:~$ mkd
+mkdir    mkdosfs  
+uma@uma-VirtualBox:~$ cd
+cd                 cd-fix-profile     cd-it8             
+cd-create-profile  cd-iccdump 
+38. What are the different types of shell and where are they used and how do we use them?
+Types of shells and their use are :-
+1. The C Shell (csh)-It includes helpful programming features like built-in arithmetic and C-like expression syntax.
+2. The Bourne Shell (sh)-A Bourne shell enables the writing and executing of shell scripts, which provide basic program control flow, control over input/output (I/O) file descriptors and all key features required to create scripts or structured programs for shell.
+3. The Korn Shell (ksh)-It includes features like built-in arithmetic and C-like arrays, functions, and string-manipulation facilities.It is faster than C shell.
+4. GNU Bourne-Again Shell (bash)-Bourne again shell (Bash) is a free Unix shell that can be used in place of the Bourne shell. It is a complete implementation of the IEEE Portable Operating System Interface for Unix (POSIX) and Open Group shell specification.
+5. The Z Shell (zh)-is an extended version of the Bourne Shell (sh), with plenty of new features, and support for plugins and themes
+
+
+We can see them as follows:
+uma@uma-VirtualBox:~
+$ cat /etc/shells
+# /etc/shells: valid login shells
+/bin/sh
+/bin/bash
+/usr/bin/bash
+/bin/rbash
+/usr/bin/rbash
+/bin/dash
+/usr/bin/dash
+39. What is the difference between login shell and non-login shell?
+Login Shell: If the output is the name of our shell, prepended by a dash, then it is a login shell. Example: -bash, -su, stc
+Non-Login Shell: A non login shell is started by a program without a login. Example: for a bash shell it will be simply bash.
+The difference is that with login shell, you load the profile of the submission user whereas the non-login shell it will load the default environment. By default, the Shell parameter is empty  so it will use the non-login shell.
+
+
+40. How do we start login shell and non-login shell?
+We can start login shell by using the following commands:
+*  su -l 
+*  su --login 
+*  su USERNAME - 
+        We can start non-login shell by using following commands:
+* su 
+* su USERNAME
+41. What happens when you start a login shell (which files are read and used and Why)?
+Your login shell will set the PATH environment variable, TERM, the UID and GID of the terminal amongst other things. These are the essential requirements in order to work efficiently.
+Upon start-up, your login shell consults two sets of files:
+1. users', as well as the system-wide login shell initialisation files also known as the profile files
+2. users', as well as the system-wide non-login shell initialisation files commonly referred to as 'shell rc' files.
+
+
+42. What happens when you start a non-login shell (Which files are read and used and Why)?
+The non-login shell (bash in my case) files are:
+
+
+/etc/bashrc
+~/.bashrc
+            
+which are run in order to set up variables and other necessaries at shell initialisation.
+There are many things you can achieve using these files. For example you can initialise parameters, you can set your PATH, you can set what your prompt looks like, and much more.
+Using these files, you can set up your entire environment. Obviously because you, are the owner of your ~/.bash_profile and ~/.bashrc, you have full control to make changes to these files.
+
+
+43. What are Shell Configuration Files, why do we need it?
+* Shell configuration files are executed automatically when you log in and. out of a shell. They initialize and configure a shell upon login and. perform cleanup operations upon logout.
+* To configure Bash to use our custom settings we need to configure various configuration files that are used. Some of these files are only executed at "login", others are executed each time a new instance of your Bash shell is started.
+44. Explain the Order of file usage from the system/user's home directory when user logs in to the System.
+Documents--These include text files, such as letters or reports, computer source code, or anything else that you write and want to save.
+Commands--Most commands are executable files; that is, they are files you can execute to run a particular program. 
+For example, the date command that you saw in the previous chapter, which executes a program that provides the current date, is an executable file.
+Devices--Your terminal, printer, and disk drive(s) are all treated as files.
+Directories--A directory is simply a file that contains other files.
+
+
+45. What are Shell Variables, list major shell variables and what do they represent?
+* A shell variable is a special variable that is set by the shell and is required by the shell in order to function correctly. Some of these variables are environment variables whereas others are local variable 
+* A variable is a character string to which we assign a value. The value assigned could be a number, text, filename, device, or any other type of data.
+*  A variable is nothing more than a pointer to the actual data. The shell enables you to create,  assign, and delete variables.
+
+
+46. How we see all our env variables?
+By the use of “env” command.
+47. How we see all env variables in alphabetical order?
+env | sort
+uma@uma-VirtualBox:~$ env | sort
+CLUTTER_IM_MODULE=ibus
+COLORTERM=truecolor
+DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus
+DESKTOP_SESSION=ubuntu
+DISPLAY=:0
+GDMSESSION=ubuntu
+GNOME_DESKTOP_SESSION_ID=this-is-deprecated
+GNOME_SHELL_SESSION_MODE=ubuntu
+GNOME_TERMINAL_SCREEN=/org/gnome/Terminal/screen/42e1057b_2c8e_4d9a_be55_bb9b6c417bc9
+GNOME_TERMINAL_SERVICE=:1.104
+GPG_AGENT_INFO=/run/user/1000/gnupg/S.gpg-agent:0:1
+GTK_IM_MODULE=ibus
+GTK_MODULES=gail:atk-bridge
+HOME=/home/uma
+IM_CONFIG_PHASE=1
+INVOCATION_ID=0e9a68f131d14905b06498cca711c3be
+JOURNAL_STREAM=8:34156
+
+
+48. What Format does the env var and its values are stored?
+Environmental variables are stored in key-value pair format. The variable and its values are separated by an equal sign, if there are multiple values they are separated by semicolon and variables that contain spaces are written under quotation marks.
+49. How do you create your own varible?
+uma@uma-VirtualBox:~$ var_name="uma"
+uma@uma-VirtualBox:~$ echo $var_name
+uma
+
+
+50. How do you start a new bash shell?
+bash
+51. Difference between Local/Shell variables to Global Variable
+Local Variable:
+* It is declared inside a function.
+* If it is not initialized, a garbage value is stored
+* It is created when the function starts execution and lost when the functions terminate.
+* Data sharing is not possible as data of the local variable can be accessed by only one function.
+* Parameters passing is required for local variables to access the value in other function
+* When the value of the local variable is modified in one function, the changes are not visible in another function.
+* Local variables can be accessed with the help of statements, inside a function in which they are declared.
+* It is stored on the stack unless specified.
+Global Variable:
+* It is declared outside the function.
+* If it is not initialized zero is stored as default.
+* It is created before the program's global execution starts and lost when the program terminates.
+* Data sharing is possible as multiple functions can access the same global variable.
+* Parameters passing is not necessary for a global variable as it is visible throughout the program
+* When the value of the global variable is modified in one function changes are visible in the rest of the program.
+* You can access global variables by any statement in the program.
+* It is stored on a fixed location decided by the compiler
+
+
+
+
+52. Making a variable accessible from other the shell in the system.
+
+
+53. Show the real life use case of exporting a variable
+
+
+54. Convert the above script file into a command, The file should run with "myappp" instead of "myapp.sh"
+mv myapp.sh myappp
+
+
+55. What is Globbing? Explain in depth with examples?
+The Bash shell feature that is used for matching or expanding specific types of patterns is called globbing. Globbing is mainly used to match filenames or searching for content in a file. Globbing uses wildcard characters to create the pattern.
+* ls hello[!3]: It will display the directories starting with hello, ending with any character but not 3
+* ls hell?: ‘hello?’ will match all files or directories whose starting characters are ‘hello’ and it will recognize one more character. 
+
+
+* ls [[:alpha:]]* : Will display the directories starting with an alphabet (either in lower or uppercase) and ending  with any characters.
+
+
+56. List all entries with extension ".sh"
+find *.sh
+example:
+find . -type f -name "*.txt"
+uma@uma-VirtualBox:~/Desktop$ find . -type f -name "*.txt"
+./test.txt
+./uma/demo.txt
+./uma/DEMO.txt
+
+
+57. List all entries with numbers in it.
+ls | grep -E '^[0-9]+$'
+
+
+58. List all entries that starts with a character and ends with a number
+
+
+59. List all entries that name length more than 5 characters
+(Exact 4 characters long ) ls -d /tmp/????
+
+
+60. What is Quoting? and Why do we need it?
+Quoting is used to remove the special meaning of certain characters or words to the shell. Quoting can be used to disable special treatment for special characters, to prevent reserved words from being recognized as such, and to prevent parameter expansion.
+61. Write few(minimum 3) unique examples that shows, how a particular problem is solved using Quoting.
+1. echo Hello World\;
+      OUTPUT : Hello World;
+   2. echo I have \$120
+      OUTPUT : I have $120
+   3. echo It\'s unix assignment
+      OUTPUT : It's unix assignment
+
+
+62. How do you find a particular files/directories based on a particular search criteria?
+HINT:- look for commands -> locate, find and whereis
+uma@uma-VirtualBox:~/Desktop/uma$ locate demo.txt
+/home/uma/Desktop/uma/demo.txt
+uma@uma-VirtualBox:~/Desktop/uma$ find demo.txt
+demo.txt
+uma@uma-VirtualBox:~/Desktop/uma$ cd ..
+uma@uma-VirtualBox:~/Desktop$ locate demo.txt
+/home/uma/Desktop/uma/demo.txt
+uma@uma-VirtualBox:~/Desktop$ find demo.txt
+find: ‘demo.txt’: No such file or directory
+uma@uma-VirtualBox:~/Desktop$ find *.txt
+123.txt
+abc123.txt
+test.txt
+
+
+“LOCATE”
+63. Write major difference between locate, find and whereis?
+* Big difference is that find searches real files recursively down a given directory.
+* Locate searches a database without requiring specific directory. Thus, if you have saved a file before updating database, find will find it , but locate won't.
+* Whereis and which, they search only inside those directories that are mentioned in your PATH variable and only those with executable permission set.
+
+
+64. How Globbing is different from locate, find and whereis?
+Globbing will search real files recursively down a given directory,while locate will search a database without specific directory and find will search in a given directory and whereis will search commands/programs.
+65. Explain the Linux File System.
+A Linux file system is a structured collection of files on a disk drive or a partition. A partition is a segment of memory and contains some specific data.
+
+
+66. Explain absolute and Relative Paths
+An absolute path refers to the same location in a file system relative to the root directory, whereas a relative path points to a specific location in a file system relative to the current directory you are working on.
+
+
+67. What are the different ways of creating a File in linux System? Write an example of each and the difference between them.
+The different types of creating files are shown as below:
+$ touch filename : this creates empty file
+$ cat > filename : the command displays the contents of filename3.txt on the screen. The redirection operator > tells the system to place it in the filename3.txt file.
+$ filenam.txt => This creates a new empty file.
+$ echo "This is the text" > filename : he echo command will duplicate whatever you specify in the command, and put the copy into a file.
+$ grep This file.txt > new_file1.txt: 
+$ vim filename: it is used for creating and modifying.
+68. In how many ways we can delete the files from linux system? write an example of each and teh difference between them.
+rm filename
+rm filename1 filename2 filename3:To delete multiple files at once, use the rm command followed by the file names separated by space.
+rm *.pdf:You can also use a wildcard (*) and regular expansions to match multiple files
+69. Archiving files using linux command, write a command to archive set of files from linux commands.
+-c : Creates Archive.
+tar -cvf file.tar <filename>
+70. Extract the archived files from the above step.
+        -x : Extract the archive.
+tar -xvf file.tar
